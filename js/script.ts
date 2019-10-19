@@ -20,7 +20,7 @@ class Spot {
                     <span class="text-muted"><small>Created: ${this.createdDateTime}</small></span>
                     <p class="card-text my-3">${this.description}</p>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item px-2"><i class="fa fa-map-marker"></i> ${this.address}, ${this.zipCode} Vienna</li>
+                        <li class="list-group-item px-2"><i class="fas fa-map-marker-alt"></i> ${this.address}, ${this.zipCode} Vienna</li>
 						${this.moreInfo}
                     </ul>
                 </div>
@@ -43,7 +43,7 @@ class Restaurant extends Spot {
 		this.homepage = homepage;
 		this.tel = tel;
 		this.moreInfo = `
-			<li class="list-group-item px-2">${this.tel}</li>
+			<li class="list-group-item px-2"><i class="fas fa-phone"></i> ${this.tel}</li>
 			<li class="list-group-item px-2"><a href="http://www.${this.homepage}" title="" target="_blank">${this.homepage}</a></li>
 		`;
 	}
@@ -68,7 +68,7 @@ class Evnt extends Spot {
 		this.eventDateTime = eventDateTime;
 		this.price = price;
 		this.moreInfo = `
-			<li class="list-group-item px-2">${this.eventDateTime} &nbsp; | &nbsp; € ${this.price.toFixed(2)}</li>
+			<li class="list-group-item px-2"><i class="far fa-calendar-alt"></i> ${this.eventDateTime} &nbsp; | &nbsp; € ${this.price.toFixed(2)}</li>
 			<li class="list-group-item px-2"><a href="http://www.${this.homepage}" title="" target="_blank">${this.homepage}</a></li>
 		`;
 	}

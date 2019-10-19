@@ -27,7 +27,7 @@ var Spot = /** @class */ (function () {
         arrayAll.push(this);
     }
     Spot.prototype.display = function () {
-        return "\n            <div class=\"card col-12 col-md-6 col-lg-4 p-4\" style=\"display: " + this.showItem + ";\">\n                <img class=\"d-none d-md-block\" src=\"" + this.img + "\" class=\"card-img-top\" alt=\"...\">\n                <div class=\"card-body px-2 pt-2 pb-0\">\n                    <h5 class=\"card-title py-2 mb-1 main-color font-size-17\">" + this.name + "<br><small>" + this.type + "</small></h5>\n                    <span class=\"text-muted\"><small>Created: " + this.createdDateTime + "</small></span>\n                    <p class=\"card-text my-3\">" + this.description + "</p>\n                    <ul class=\"list-group list-group-flush\">\n                        <li class=\"list-group-item px-2\"><i class=\"fa fa-map-marker\"></i> " + this.address + ", " + this.zipCode + " Vienna</li>\n\t\t\t\t\t\t" + this.moreInfo + "\n                    </ul>\n                </div>\n                <hr class=\"col-12 m-0 p-0\">\n            </div>\n\t\t";
+        return "\n            <div class=\"card col-12 col-md-6 col-lg-4 p-4\" style=\"display: " + this.showItem + ";\">\n                <img class=\"d-none d-md-block\" src=\"" + this.img + "\" class=\"card-img-top\" alt=\"...\">\n                <div class=\"card-body px-2 pt-2 pb-0\">\n                    <h5 class=\"card-title py-2 mb-1 main-color font-size-17\">" + this.name + "<br><small>" + this.type + "</small></h5>\n                    <span class=\"text-muted\"><small>Created: " + this.createdDateTime + "</small></span>\n                    <p class=\"card-text my-3\">" + this.description + "</p>\n                    <ul class=\"list-group list-group-flush\">\n                        <li class=\"list-group-item px-2\"><i class=\"fas fa-map-marker-alt\"></i> " + this.address + ", " + this.zipCode + " Vienna</li>\n\t\t\t\t\t\t" + this.moreInfo + "\n                    </ul>\n                </div>\n                <hr class=\"col-12 m-0 p-0\">\n            </div>\n\t\t";
     };
     return Spot;
 }());
@@ -40,7 +40,7 @@ var Restaurant = /** @class */ (function (_super) {
         _this.showItem = "block";
         _this.homepage = homepage;
         _this.tel = tel;
-        _this.moreInfo = "\n\t\t\t<li class=\"list-group-item px-2\">" + _this.tel + "</li>\n\t\t\t<li class=\"list-group-item px-2\"><a href=\"http://www." + _this.homepage + "\" title=\"\" target=\"_blank\">" + _this.homepage + "</a></li>\n\t\t";
+        _this.moreInfo = "\n\t\t\t<li class=\"list-group-item px-2\"><i class=\"fas fa-phone\"></i> " + _this.tel + "</li>\n\t\t\t<li class=\"list-group-item px-2\"><a href=\"http://www." + _this.homepage + "\" title=\"\" target=\"_blank\">" + _this.homepage + "</a></li>\n\t\t";
         return _this;
     }
     Restaurant.prototype.display = function () {
@@ -58,7 +58,7 @@ var Evnt = /** @class */ (function (_super) {
         _this.homepage = homepage;
         _this.eventDateTime = eventDateTime;
         _this.price = price;
-        _this.moreInfo = "\n\t\t\t<li class=\"list-group-item px-2\">" + _this.eventDateTime + " &nbsp; | &nbsp; \u20AC " + _this.price.toFixed(2) + "</li>\n\t\t\t<li class=\"list-group-item px-2\"><a href=\"http://www." + _this.homepage + "\" title=\"\" target=\"_blank\">" + _this.homepage + "</a></li>\n\t\t";
+        _this.moreInfo = "\n\t\t\t<li class=\"list-group-item px-2\"><i class=\"far fa-calendar-alt\"></i> " + _this.eventDateTime + " &nbsp; | &nbsp; \u20AC " + _this.price.toFixed(2) + "</li>\n\t\t\t<li class=\"list-group-item px-2\"><a href=\"http://www." + _this.homepage + "\" title=\"\" target=\"_blank\">" + _this.homepage + "</a></li>\n\t\t";
         return _this;
     }
     Evnt.prototype.display = function () {
